@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-color
+  labels:
+   app: web-color
+spec:
+  containers:
+  - name: web-color
+    image: mmumshad/simple-webapp-color
+    ports:
+      - containerPort: 8080
+    env:
+      - name: APP_COLOR
+        value: red
+#faire un port forwardin apres execution du pod 
+# kubectl port-forward web-color 8080:8080 --address 0.0.0.0
