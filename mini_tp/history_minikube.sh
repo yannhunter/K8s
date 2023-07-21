@@ -62,3 +62,5 @@ cd
    39  touch pod.yaml
    40  vim pod.yaml
    41  ls
+
+   #force delete a StatefulSet pod// kubectl delete pods simple-webapp-color --grace-period=0 --force 
